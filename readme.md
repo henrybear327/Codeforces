@@ -24,6 +24,8 @@ The following lists will be written as followed.
         * A, B
     2. Round 313
         * A, B, C
+    3. Round Pi
+        * A, B
 
 #Gym(Virtual participation)
 
