@@ -16,7 +16,7 @@ The following lists will be written as followed.
 #Contest(Virtual)
 
 * Div 2
-    1. Round 312 (30 minutes left but can't solve anymore problems, QQ)
+    1. Round 312 (30 minutes left but can't solve more problems, QQ)
         * A, B, C
 
 #Contest(Real time)
