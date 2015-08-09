@@ -9,27 +9,15 @@ public class Main{
       
       // Start writing your solution here.
 	
-	int a, b, c, d, e, f;
-	a = sc.nextInt();
-	b = sc.nextInt();
-	c = sc.nextInt();
-	d = sc.nextInt();
-	e = sc.nextInt();
-	f = sc.nextInt();
+	int[] a;
+        a = new int[6]; // 利用new指令產生物件
+	for(int i = 0; i < 6; i++) {
+	    int temp = sc.nextInt();	 
+   	    a[i] = temp;
+	}
 
-	int answer = (a + b + c) * (a + b + c) - (a * a) - (c * c) - (e * e);
-	out.println(answer);
-      /*
-      int n      = sc.nextInt();        // read input as integer
-      long k     = sc.nextLong();       // read input as long
-      double d   = sc.nextDouble();     // read input as double
-      String str = sc.next();           // read input as String
-      String s   = sc.nextLine();       // read whole line as String
-
-      int result = 3*n;
-      out.println(result);                    // print via PrintWriter
-      */
-
+	int answer = (a[0] + a[1] + a[2]) * (a[0] + a[1] + a[2]) - (a[0] * a[0]) - (a[2] * a[2]) - (a[4] * a[4]);
+	System.out.println(answer);
       // Stop writing your solution here.
       out.close();
    }
@@ -59,24 +47,6 @@ public class Main{
  
       int nextInt() {
           return Integer.parseInt(next());
-      }
- 
-      long nextLong() {
-          return Long.parseLong(next());
-      }
- 
-      double nextDouble() {
-          return Double.parseDouble(next());
-      }
- 
-      String nextLine(){
-          String str = "";
-	  try {
-	     str = br.readLine();
-	  } catch (IOException e) {
-	     e.printStackTrace();
-	  }
-	  return str;
       }
    }
 }
