@@ -30,8 +30,18 @@ The following lists will be written as followed.
         * A, B
     4. Round 315
         * A, B, C
+    5. Round 316
+        * A, B, C
 
 #Gym(Virtual participation)
 
 1. Acm Aamman Collegiate Programming Contest (3-star)
     * C, E, J, K
+
+# Notes
+
+1. Test for upper/lower bound input that's given by the problem statement.
+(Hacks may come from here! Ex: Round 316 Div2 problem B)
+
+2. Does the problem need a linear scan? Or just look at its left and right?
+(Round 316 Div2 problem C)
