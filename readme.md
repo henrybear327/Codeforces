@@ -32,6 +32,8 @@ The following lists will be written as followed.
         * A, B, C
     5. Round 316
         * A, B, C
+    6. Round 317
+        * A, B
 
 #Gym(Virtual participation)
 
@@ -45,3 +47,5 @@ The following lists will be written as followed.
 
 2. Does the problem need a linear scan? Or just look at its left and right?
 (Round 316 Div2 problem C)
+
+3. Read the problem statements carefully. Use pen and paper to finalise thoughts before actually coding them!
