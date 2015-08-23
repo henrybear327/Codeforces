@@ -33,7 +33,7 @@ The following lists will be written as followed.
     5. Round 316
         * A, B, C
     6. Round 317
-        * A, B
+        * A, B, C
 
 #Gym(Virtual participation)
 
@@ -49,3 +49,5 @@ The following lists will be written as followed.
 (Round 316 Div2 problem C)
 
 3. Read the problem statements carefully. Use pen and paper to finalise thoughts before actually coding them!
+
+4. Don't rush! Double check the source code and rethink the program flow before submitting the code.
