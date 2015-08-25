@@ -1,75 +1,52 @@
 #include <cstdio>
 #include <cstdlib>
-#include <cstring>
-#include <stack>
-#include <queue>
-#include <climits>
-
+#include <map>
 #define MAX(x, y) ((x) > (y) ? (x) : (y))
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
+
+#ifdef _WIN32
+#define lld "I64d"
+#else
+#define lld "lld"
+#endif
 
 using namespace std;
 
 int main()
 {
-    int n, k;
-    scanf("%d %d", &n, &k);
+    long long int total, ratio;
+    scanf("%lld %lld", &total, &ratio);
 
-    long long int array[n], max_num = INT_MIN, min_num = INT_MAX;
-    for (int i = 0; i < n; i++) {
-        scanf("%I64d", &array[i]);
-        max_num = MAX(array[i], max_num);
-        min_num = MIN(array[i], min_num);
+    if (total < 3) {
+        printf("0\n");
+        return 0;
     }
 
-    int answer = 0;
+    long long int sequence[total];
+    map<long long int, long long int> l, r;
+    for (int i = 0; i < total; i++) {
+        long long int curr;
+        scanf("%lld", &curr);
+        sequence[i] = curr;
 
-    int used[200100] = {0}, used_index = 0;
-    bool flag = true;
-    if (k == 1) {
-        for (int i = 0; i < n - 2; i++) {
-            int target = array[i], target_count = 1;
-            for (int k = 0; k < used_index; k++) {
-                if (target == used[k]) {
-                    flag = false;
-                    break;
-                }
-            }
-
-            if (flag)
-                used[used_index++] = target;
-            for (int j = i + 1; j < n && flag; j++) {
-                // printf("here, ");
-                if (target == array[j])
-                    target_count++;
-            }
-            // printf("target_count %d\n", target_count);
-            if (target_count >= 2)
-                answer += (target_count - 2); //WA here!!!
-            flag = true;
-            // printf("aa%d\n", answer);
-        }
-    } else {
-        for (int i = 0; i < n - 2; i++) {
-            // printf("i = %d\n", i);
-            long long int num_double = array[i] * k;
-            long long int num_triple = array[i] * k * k;
-
-            if (num_double > max_num || num_double < min_num)
-                continue;
-            if (num_triple > max_num || num_triple < min_num)
-                continue;
-
-            int tmp_count = 0;
-            for (int j = i + 1; j < n; j++) {
-                if (num_double == array[j])
-                    tmp_count++;
-                if (num_triple == array[j])
-                    answer += tmp_count;
-            }
-        }
+        if (i == 0)
+            l[curr]++;
+        else
+            r[curr]++;
     }
-    printf("%d\n", answer);
+
+    long long int ans = 0;
+    for (int i = 1; i < total - 1; i++) {
+        r[sequence[i]]--;
+        long long int l_cnt = 0, r_cnt = 0;
+        l_cnt = sequence[i] % ratio == 0 ? l[sequence[i] / ratio] : 0;
+        r_cnt = sequence[i] % ratio == 0 ? r[sequence[i] * ratio] : 0;
+
+        ans += (l_cnt * r_cnt);
+        l[sequence[i]]++;
+    }
+
+    printf("%lld\n", ans);
 
     return 0;
 }
