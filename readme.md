@@ -27,7 +27,7 @@ The following lists will be written as followed.
     2. Round 313
         * A, B, C
     3. Round Pi
-        * A, B
+        * A, B, C
     4. Round 315
         * A, B, C
     5. Round 316
