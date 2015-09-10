@@ -5,6 +5,7 @@
 #include <stack>
 #include <queue>
 #include <vector>
+#include <algorithm>
 #include <climits> //LLONG_MIN LLONG_MAX INT_MIN INT_MAX
 
 #ifdef _WIN32
@@ -12,9 +13,6 @@
 #else
 #define lld "lld"
 #endif
-
-#define MIN(x, y) ((x) < (y) ? (x) : (y)
-#define MAX(x, y) ((x) > (y) ? (x) : (y)
 
 using namespace std;
 
