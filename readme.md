@@ -36,6 +36,8 @@ The following lists will be written as followed.
         * A, B, C
     7. Round 318
         * A, B, C
+    8. Round 319
+        * A, C
 
 #Gym(Virtual participation)
 
