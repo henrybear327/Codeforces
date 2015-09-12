@@ -43,6 +43,8 @@ The following lists will be written as followed.
 
 1. Acm Aamman Collegiate Programming Contest (3-star)
     * C, E, J, K
+2. 2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest (3-star)
+    * A, B, H (F TLE)
 
 # Notes
 
