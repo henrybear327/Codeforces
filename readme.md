@@ -57,3 +57,5 @@ The following lists will be written as followed.
 3. Read the problem statements carefully. Use pen and paper to finalise thoughts before actually coding them!
 
 4. Don't rush! Double check the source code and rethink the program flow before submitting the code.
+
+5. If `long long int` is required, decalre all of the variables using `long long int` in case you miss any of them. (2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest problem C, forgot to use `long long int` for `sum_so_far`, stupid)
