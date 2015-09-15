@@ -13,7 +13,7 @@ int main()
         unordered_map<long long int, long long int> DP_map;
 
         long long int sum_so_far = 0;
-        DP_map[sum_so_far] = 1;
+        DP_map[sum_so_far] = 1; // think of the way you create prefix sum table, there will be one value, 0, in the very beginning.
         long long int ans = 0;
         for (int i = 0; i < cnt; i++) {
             long long int tmp;
