@@ -38,6 +38,8 @@ The following lists will be written as followed.
         * A, B, C
     8. Round 319
         * A, C
+    9. Round 320
+        * A, B, D
 
 #Gym(Virtual participation)
 
