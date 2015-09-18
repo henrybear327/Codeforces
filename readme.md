@@ -47,6 +47,8 @@ The following lists will be written as followed.
     * C, E, J, K
 2. 2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest (3-star)
     * A, B, H (F TLE)
+3. 2014-2015 Samara SAU ACM ICPC Quarterfinal Qualification Contest
+    * A, E, F, G, I, M
 
 # Notes
 
