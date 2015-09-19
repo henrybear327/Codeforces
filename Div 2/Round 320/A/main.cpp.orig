@@ -17,6 +17,19 @@
 using namespace std;
 
 int main() {
+  int inp;
+  scanf("%d", &inp);
+
+  int cnt = 0;
+  while (inp) {
+    if (inp & 1)
+      cnt++;
+    inp >>= 1;
+  }
+
+  printf("%d\n", cnt);
+
+  /*
   long long int inp;
   scanf("%lld", &inp);
 
@@ -24,14 +37,14 @@ int main() {
 
   int ans = 0;
   while (inp) {
-    if (inp - tmp >= 0) {
-      ans++;
-      inp -= tmp;
-    }
-    tmp >>= 1;
+  if (inp - tmp >= 0) {
+  ans++;
+  inp -= tmp;
+  }
+  tmp >>= 1;
   }
 
   printf("%d\n", ans);
-
+  */
   return 0;
 }
