@@ -1,48 +1,38 @@
-#include <cstdio>
-#include <cstring>
+#include<cstdio>
+#include<algorithm>
+#include<vector>
+
+using namespace std;
 
 int main()
 {
     int total, target;
-    scanf("%d %d", &total, &target);
+    scanf("%d %d",&total, &target);
 
-    bool flag = false, exist[target];
-    memset(exist, false, sizeof(exist));
+    vector<bool> ok(target, false);
 
     for(int i = 0; i < total; i++) {
-        int curr;
-        scanf("%d", &curr);
+        int tmp;
+        scanf("%d", &tmp);
+        tmp %= target;
 
-        curr %= target;
-
-        if(!curr) {
-            flag= true;
-            break;
-        }
-
-        bool exist_tmp[target];
-        for(int j = 0; j < target; j++) {
-            exist_tmp[j] = exist[j];
-        }
-
+        vector<bool> tmp_ok = ok;
         for(int j = 1; j < target; j++) {
-            if(exist[j]) {
-                exist_tmp[(j + curr) % target] = true;
+            if(tmp_ok[j]) {
+                ok[(j + tmp) % target] = true;
             }
         }
 
-        if(exist_tmp[0]) {
-            flag = true;
-            break;
-        }
+        ok[tmp] = true;
 
-        exist_tmp[curr] = true;
-        for(int j = 0; j < target; j++) {
-            exist[j] = exist_tmp[j];
+        if(ok[0]) {
+            printf("YES\n");
+            return 0;
         }
     }
 
-    printf("%s\n", flag ? "YES" : "NO");
+    printf("NO\n");
 
-    return 0;
+	return 0;
 }
+
