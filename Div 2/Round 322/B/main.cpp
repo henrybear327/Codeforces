@@ -19,6 +19,18 @@ int main()
         scanf("%d", &data[i]);
     }
 
+    int maxh = data[num - 1];
+    data[num - 1] = 0;
+    for (int i = num - 2; i >= 0; i--) {
+        int tmp = data[i];
+        data[i] = max(0, maxh + 1 - data[i]);
+        maxh = max(tmp, maxh);
+    }
+
+    for (int i = 0; i < num; i++)
+        printf("%d%c", data[i], i == num - 1 ? '\n' : ' ');
+
+    /*
     int maxx[num], rmax = data[num - 1];
     maxx[num - 1] = data[num - 1];
     bool flag[num];
@@ -39,6 +51,7 @@ int main()
             ans++;
         printf("%d%c", ans, i == num - 1 ? '\n' : ' ');
     }
+    */
 
     return 0;
 }
