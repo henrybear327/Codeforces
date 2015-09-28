@@ -42,6 +42,8 @@ The following lists will be written as followed.
         * A, B, D
     10. Round 321
         * A, B, C
+    11. Round 322
+        * A, B (Test case 53!!), C
 
 #Gym(Virtual participation)
 
