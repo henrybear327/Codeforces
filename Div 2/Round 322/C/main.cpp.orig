@@ -9,63 +9,49 @@
 
 using namespace std;
 
-typedef struct data { int first, second; } Data;
-
-int cmp(const void *a, const void *b) {
-  if (((Data *)a)->first == ((Data *)b)->first)
-    return ((Data *)b)->second - ((Data *)a)->second;
-  return ((Data *)a)->first - ((Data *)b)->first;
-}
+bool cmp(pair<int, int> a, pair<int, int> b) { return a.first < b.first; }
 
 int main() {
-  int tot, k;
-  scanf("%d %d", &tot, &k);
+  int tot, unit;
+  scanf("%d %d", &tot, &unit);
 
-  Data inp[tot];
+  pair<int, int> inp[100010];
   for (int i = 0; i < tot; i++) {
-    int tmp;
-    scanf("%d", &tmp);
-    inp[i].first = (100 - tmp) % 10;
-    inp[i].second = tmp;
+    scanf("%d", &inp[i].second);
+    inp[i].second = 100 - inp[i].second;
+    inp[i].first = inp[i].second % 10;
   }
 
-  qsort(inp, tot, sizeof(Data), cmp);
+  sort(inp, inp + tot, cmp);
 
-  for (int i = 0; i < tot; i++) {
-    if (k >= inp[i].first) {
-      k -= inp[i].first;
-      inp[i].second += inp[i].first;
-      inp[i].first = 100 - inp[i].second;
+  for (int i = 0; i < tot && unit; i++) {
+    if (unit >= inp[i].first) {
+      unit -= inp[i].first;
+      inp[i].first = inp[i].second - inp[i].second % 10;
     } else {
-      int ans = 0;
-      for (int i = 0; i < tot; i++) {
-        ans += inp[i].second / 10;
-      }
-
-      printf("%d\n", ans);
-
-      return 0;
+      inp[i].first = inp[i].second - unit;
+      unit = 0;
     }
+    printf("%d\n", inp[i].first);
   }
 
-  qsort(inp, tot, sizeof(Data), cmp);
-  for (int i = 0; i < tot; i++) {
-    if (k - inp[i].first >= 0) {
-      k -= inp[i].first;
-      inp[i].second += inp[i].first;
-      inp[i].first = 100 - inp[i].second;
+  sort(inp, inp + tot, cmp);
+
+  for (int i = 0; i < tot && unit; i++) {
+    if (unit >= inp[i].first) {
+      unit -= inp[i].first;
+      inp[i].first = 0;
     } else {
-      inp[i].second += k;
-      inp[i].first = 100 - inp[i].second;
-      break;
+      inp[i].first -= unit;
+      unit = 0;
     }
   }
 
   int ans = 0;
   for (int i = 0; i < tot; i++) {
-    ans += inp[i].second / 10;
+    printf("%d\n", 100 - inp[i].first);
+    ans += (100 - inp[i].first) / 10;
   }
-
   printf("%d\n", ans);
 
   return 0;
