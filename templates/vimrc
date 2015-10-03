@@ -17,6 +17,7 @@ set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set softtabstop=4	 " Number of spaces per Tab
 set cursorline	" Show underline
+set cursorcolumn
 set ruler	" Show row and column ruler information
 
 set mouse=a
