@@ -49,7 +49,7 @@ The following lists will be written as followed.
     13. Round 324
         * A
     14. Round 325
-        * A, B
+        * A, B, C
     15. Round 326
         * A, B, C
 
