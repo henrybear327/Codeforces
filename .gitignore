@@ -2,3 +2,4 @@ readme.md~
 *.cpp.orig
 *.o
 .cpp~
+.main.cpp.swp
