@@ -4,6 +4,10 @@ I started doing Codeforces contest in 2015 summer vacation while participating i
 
 This is a repository that I use for backing up my Codeforces code. I am still new to this competitive programming field, so my code may be really bad. Please don't take it too seriously.
 
+# Compilation parameter
+
+`clang-format-3.7 -style=LLVM -i main.cpp && astyle --style=linux main.cpp && g++ -Wall -Wextra -o main.o main.cpp`
+
 #List format
 
 The following lists will be written as followed.
@@ -53,6 +57,8 @@ The following lists will be written as followed.
     15. Round 326
         * A, B, C
     16. Round 327
+        * A, B
+    17. Round 328
         * A, B
 
 #Gym(Virtual participation)
