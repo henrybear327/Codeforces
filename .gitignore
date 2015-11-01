@@ -1,0 +1,4 @@
+readme.md~
+*.cpp.orig
+*.o
+.cpp~
