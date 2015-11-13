@@ -2,8 +2,7 @@
 
 *.o
 
-*.c.orig
-*.cpp.orig
+*.orig
 
 makefile~
 

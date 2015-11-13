@@ -60,6 +60,10 @@ The following lists will be written as followed.
         * A, B
     17. Round 328
         * A, B
+    18. Round 329
+        * A, B
+    19. Testing Round #12
+        * A, B
 
 #Gym(Virtual participation)
 
@@ -78,8 +82,12 @@ The following lists will be written as followed.
 2. Does the problem need a linear scan? Or just look at its left and right?
 (Round 316 Div2 problem C)
 
-3. Read the problem statements carefully. Use pen and paper to finalise thoughts before actually coding them!
+3. Read the problem statements carefully. Use pen and paper to finalize thoughts before actually coding them!
 
 4. Don't rush! Double check the source code and rethink the program flow before submitting the code.
 
-5. If `long long int` is required, decalre all of the variables using `long long int` in case you miss any of them. (2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest problem C, forgot to use `long long int` for `sum_so_far`, stupid)
+5. If `long long int` is required, declare all of the variables using `long long int` in case you miss any of them. (2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest problem C, forgot to use `long long int` for `sum_so_far`, stupid)
+
+# Command
+
+`find . -type f -name '*.orig' -delete`
