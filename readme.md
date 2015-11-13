@@ -17,13 +17,7 @@ The following lists will be written as followed.
         1. Round / contest name
             * solved problem
 
-#Contest(Virtual)
-
-* Div 2
-    1. Round 312 (30 minutes left but can't solve more problems, QQ)
-        * A, B, C
-
-#Contest(Real time)
+#Contest
 
 * Div 2
     1. Round 312 (The first ever contest that I participated in!)
@@ -64,8 +58,10 @@ The following lists will be written as followed.
         * A, B
     19. Testing Round #12
         * A, B
+    20. Educational Round #1
+        * A, B, C
 
-#Gym(Virtual participation)
+#Gym
 
 1. Acm Aamman Collegiate Programming Contest (3-star)
     * C, E, J, K
