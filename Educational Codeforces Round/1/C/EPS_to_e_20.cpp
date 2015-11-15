@@ -6,7 +6,7 @@
 using namespace std;
 
 #define INF 1e9
-#define EPS 1e-20
+#define EPS 1e-20 //1e-17 will got AC, 1e-16 will get WA
 #define double long double
 
 inline double atan2_process(double x, double y)
