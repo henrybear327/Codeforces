@@ -22,7 +22,11 @@ int main()
         orig[i].second = i;
         sorted[i] = orig[i];
     }
-
+    
+    /*
+    直接對最終位置進行搜尋
+    利用最終位置來做區間劃分即可輕易解出答案
+    */
     sort(sorted, sorted + n);
     int max_element_idx = -1, cnt = 0;
     for (int i = 0; i < n; i++) {
