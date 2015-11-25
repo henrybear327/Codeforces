@@ -24,12 +24,14 @@ int main()
     }
 
     sort(sorted, sorted + n);
-    int max_element_idx = -1, cnt = 0;
+
+    int cnt = 0;
+    int max_idx = -1;
     for (int i = 0; i < n; i++) {
-        max_element_idx =
-            max(max_element_idx,
-                (int)(lower_bound(sorted, sorted + n, orig[i]) - sorted));
-        if (max_element_idx == i)
+        // printf("%ld\n", lower_bound(sorted, sorted + n, orig[i]) - sorted);
+        max_idx =
+            max(max_idx, (int)(lower_bound(sorted, sorted + n, orig[i]) - sorted));
+        if (max_idx == i)
             cnt++;
     }
 
