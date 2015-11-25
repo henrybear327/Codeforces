@@ -76,17 +76,23 @@ The following lists will be written as followed.
 
 # Notes
 
-1. Test for upper/lower bound input that's given by the problem statement.
-(Hacks may come from here! Ex: Round 316 Div2 problem B)
-
-2. Does the problem need a linear scan? Or just look at its left and right?
-(Round 316 Div2 problem C)
-
-3. Read the problem statements carefully. Use pen and paper to finalize thoughts before actually coding them!
-
-4. Don't rush! Double check the source code and rethink the program flow before submitting the code.
-
-5. If `long long int` is required, declare all of the variables using `long long int` in case you miss any of them. (2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest problem C, forgot to use `long long int` for `sum_so_far`, stupid)
+* Test for upper/lower bound input that's given by the problem statement. (Hacks may come from here! Ex: Round 316 Div2 problem B)
+*Think of `long long int` before coding.
+* Does the problem need a linear scan? Or just look at its left and right? (Round 316 Div2 problem C)
+* Read the problem statements carefully. Use pen and paper to finalize thoughts before actually coding them! (Try all test cases first)
+* Don't rush! Double check the source code and rethink the program flow before submitting the code. (Rubber duck debugging)
+* If `long long int` is required, declare all of the variables using `long long int` in case you miss any of them. (2013-2014 Samara SAU ACM ICPC Quarterfinal Qualification Contest problem C, forgot to use `long long int` for `sum_so_far`, stupid)
+* Use `scanf("%s", input)` when there is no spaces in the string. Mix usage of `fgets` and `scanf` will have `\n` problem.
+* `scanf()` > `fgets()`
+* UVa 11988: when using global variables, don't forget to INITIALIZE it before starting reading in new test cases!!
+* Test the special cases, such as 0, -1, 1, or max_value, before even submitting the code.
+* When using `double`, don't make mistakes like
+  ```
+  int x = 1, y = 2;
+  double s = y / x;
+  ```
+* Not all the restrictions are actually possible!! (Round 333 Problem C, Round 327 C)
+ 
 
 # Command
 
