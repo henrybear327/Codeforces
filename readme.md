@@ -64,6 +64,8 @@ The following lists will be written as followed.
         * A, B, C
     22. Round 333
         * A, B, C
+    23. Educational Round #2
+        * A, B
 
 #Gym
 
@@ -92,7 +94,7 @@ The following lists will be written as followed.
   double s = y / x;
   ```
 * Not all the restrictions are actually possible!! (Round 333 Problem C, Round 327 C)
- 
+
 
 # Command
 
