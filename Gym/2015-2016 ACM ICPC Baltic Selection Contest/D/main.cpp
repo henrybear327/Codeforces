@@ -42,37 +42,6 @@ int bfs()
 
     return visited[n - 1][m - 1];
 }
-/*
-void dfs(int x, int y, int step)
-{
-    v[x][y] = 1;
-    if (x == n - 1 && y == m - 1) {
-	ans = min(ans, town * b + wilderness * a);
-	v[x][y] = 0;
-	return;
-    }
-
-    if (step % 2 == 1)
-	town++;
-    else
-	wilderness++;
-
-    for (int i = 0; i < 4; i++) {
-	int x1 = x + dir[i][0];
-	int y1 = y + dir[i][1];
-
-	if (bounded(x1, y1) && v[x1][y1] == 0 && g[x1][y1] == '.') {
-	    dfs(x1, y1, step + 1);
-	}
-    }
-    v[x][y] = 0;
-    if (step % 2 == 1)
-	town--;
-    else
-	wilderness--;
-}
-*/
-
 int main()
 {
     while (scanf("%d %d", &m, &n) == 2) {
@@ -85,7 +54,6 @@ int main()
         }
 
         memset(v, 0, sizeof(v));
-        //dfs(0, 0, 1);
         int cnt = bfs();
 
         if(cnt < n + m - 2)
