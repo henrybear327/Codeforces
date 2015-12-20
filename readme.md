@@ -66,6 +66,8 @@ The following lists will be written as followed.
         * A, B, C
     23. Educational Round #2
         * A, B
+    24. Educational Round #3
+        * A, B, C
 
 #Gym
 
