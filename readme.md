@@ -69,10 +69,10 @@ The following lists will be written as followed.
     24. Educational Round #3
         * A, B, C
     25. Round 336
-        * A, B
+        * A, B, C
     26. Educational Round #4
         * A, B, C
-        
+
 #Gym
 
 1. Acm Aamman Collegiate Programming Contest (3-star)
