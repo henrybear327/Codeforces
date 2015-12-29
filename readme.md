@@ -71,7 +71,7 @@ The following lists will be written as followed.
     25. Round 336
         * A, B, C
     26. Educational Round #4
-        * A, B, C
+        * A, B, C, D
 
 #Gym
 
