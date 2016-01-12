@@ -72,6 +72,8 @@ The following lists will be written as followed.
         * A, B, C
     26. Educational Round #4
         * A, B, C, D
+    27. Educational Round #5
+        * A
 
 #Gym
 
