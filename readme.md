@@ -78,6 +78,8 @@ The following lists will be written as followed.
         * A, B
     29. Round 339
         * A, B, C
+    30. Round 228
+        * A, B, C, D, E
 
 #Gym
 
