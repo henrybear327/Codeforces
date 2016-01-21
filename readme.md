@@ -80,6 +80,8 @@ The following lists will be written as followed.
         * A, B, C
     30. Round 228
         * A, B, C, D, E
+    31. Educational Round #6
+        * A, B, C
 
 #Gym
 
