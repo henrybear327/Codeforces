@@ -84,6 +84,8 @@ The following lists will be written as followed.
         * A, B, C
     32. Round 234
         * A, B, C
+    33. Round 244
+        * A, B, C, E
 
 #Gym
 
