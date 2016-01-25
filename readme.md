@@ -85,7 +85,11 @@ The following lists will be written as followed.
     32. Round 234
         * A, B, C
     33. Round 244
-        * A, B, C, E
+        * A, B, C (SCC), E
+    34. Round 271
+        * A, B
+    35. Round 247
+        * A, B, C (無限背包)
 
 #Gym
 
