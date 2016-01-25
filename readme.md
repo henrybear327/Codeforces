@@ -92,6 +92,8 @@ The following lists will be written as followed.
         * A, B
     36. Round 247
         * A, B, C (無限背包)
+    37. Round 338
+        * B
 
 #Gym
 
