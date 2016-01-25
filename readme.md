@@ -88,7 +88,9 @@ The following lists will be written as followed.
         * A, B, C (SCC), E
     34. Round 271
         * A, B
-    35. Round 247
+    35. Round 340
+        * A, B
+    36. Round 247
         * A, B, C (無限背包)
 
 #Gym
