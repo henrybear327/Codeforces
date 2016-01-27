@@ -104,7 +104,7 @@ The following lists will be written as followed.
 3. 2014-2015 Samara SAU ACM ICPC Quarterfinal Qualification Contest
     * A, E, F, G, I, M
 4. 2015-2016 Samara SAU ACM ICPC Quarterfinal Qualification Contest
-    * D, F, I, J
+    * B, D, F, I, J
 
 # Notes
 
