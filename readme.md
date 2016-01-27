@@ -129,3 +129,7 @@ The following lists will be written as followed.
 # Command
 
 `find . -type f -name '*.orig' -delete`
+
+# bash_profile
+
+* Add `gcc5` in `/usr/local/bin` to `PATH` in `bash_profile`
