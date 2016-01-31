@@ -94,6 +94,8 @@ The following lists will be written as followed.
         * A, B, C (無限背包)
     37. Round 338
         * B
+    38. Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)
+        * A, B
 
 #Gym
 
