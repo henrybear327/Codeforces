@@ -96,6 +96,8 @@ The following lists will be written as followed.
         * B
     38. Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)
         * A, B
+    39. Round 341
+        * A, B
 
 #Gym
 
