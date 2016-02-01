@@ -98,6 +98,8 @@ The following lists will be written as followed.
         * A, B
     39. Round 341
         * A, B
+    40. Round 311
+        * B
 
 #Gym
 
