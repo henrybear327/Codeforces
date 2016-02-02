@@ -20,6 +20,7 @@ void gen_table()
 	    int j = 2;
 	    while(i * j < 1000010) {
 		is_prime[i * j] = false;
+		j++;
 	    }
 	}
     }
@@ -28,14 +29,13 @@ void gen_table()
 int main()
 {
     memset(is_prime, -1, sizeof(is_prime));
+    gen_table();
 
     ll n;
     scanf("%lld", &n);
 
     map<ll, int> cnt;
     for(ll i = 2; i * i <= n; i++) { // i * i -> long long int!! Stupid mistake!
-	assert(i * i <= n);
-
 	if(is_prime[i] == true) {
 	    while(n % i == 0) {
 		cnt[i]++;
