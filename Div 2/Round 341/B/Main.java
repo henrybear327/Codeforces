@@ -15,11 +15,16 @@ public class Main {
 			int a, b;
 			a = sc.nextInt();
 			b = sc.nextInt();
-
+			
+			s1.put(b - a, s1.getOrDefault(b - a, 0) + 1);
+			s2.put(b + a, s2.getOrDefault(b + a, 0) + 1);
+			
+			/*
 			int c1 = s1.containsKey(b - a) ? s1.get(b - a) : 0;
 			s1.put(b - a, c1 + 1);
 			int c2 = s2.containsKey(b + a) ? s2.get(b + a) : 0;
 			s2.put(b + a, c2 + 1);
+			*/
 		}
 
 		long ans = 0;

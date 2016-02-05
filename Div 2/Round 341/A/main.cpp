@@ -13,30 +13,21 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    
-    long long int ans = 0;
-    long long int odd[n], idx = 0;
+
+    long long int ans = 0, cnt = 0, mn = LLONG_MAX;
     for(int i = 0; i < n; i++) {
 	long long int tmp;
 	scanf("%lld", &tmp);
 
-	if(tmp % 2 == 0)
-	    ans += tmp;
-	else {
-	    odd[idx++] = tmp;
+	if(tmp & 1LL == 1) {
+	    cnt++;
+	    mn = min(mn, tmp);
 	}
+	ans += tmp;
     }
 
-    sort(odd, odd + idx);
-    if(idx % 2 == 0) {
-	for(int i = 0; i < idx; i++) {
-	    ans += odd[i];
-	}
-    } else {
-	for(int i = 1; i < idx; i++) {
-	    ans += odd[i];
-	}
-    }
+    if(cnt & 1LL)
+	ans -= mn;
 
     printf("%lld\n", ans);
 
