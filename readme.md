@@ -100,7 +100,7 @@ The following lists will be written as followed.
         * A, B
     40. Round 311
         * B
-    41. Round 341
+    41. AIM Tech Round (Div. 2)
         * A, B
 
 #Gym
