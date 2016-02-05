@@ -91,7 +91,7 @@ The following lists will be written as followed.
     35. Round 340
         * A, B
     36. Round 247
-        * A, B, C (無限背包)
+        * A, B, C (無限背包), D (unsolved)
     37. Round 338
         * B
     38. Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)

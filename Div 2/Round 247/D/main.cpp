@@ -34,19 +34,11 @@ void cal_comb()
 int main()
 {
     cal_comb();
-    
+
     int m, k;
     scanf("%d %d", &m, &k);
 
-    for(int i = 1; i < 64; i++) {
-	if(i < k)
-	    continue;
-
-	if(comb[i][k] == m) {
-	    printf("%lld\n", i == 1 ? 1 : comb[i - 1][k] + (1LL << (i - 1)));
-	    return 0;
-	}	    
-    }
+     
 
     return 0;
 }
