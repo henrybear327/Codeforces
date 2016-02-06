@@ -17,9 +17,9 @@ public class Main
         String str = sc.next();           // read input as String
         String s   = sc.nextLine();       // read whole line as String
 
-	while(sc.hasNext()) {
-		...
-	}
+    	while(sc.hasNext()) {
+    		...
+    	}
 
         int result = 3*n;
         out.println(result);                    // print via PrintWriter
