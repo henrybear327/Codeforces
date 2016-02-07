@@ -102,6 +102,8 @@ The following lists will be written as followed.
         * B
     41. AIM Tech Round (Div. 2)
         * A, B
+    42. Round 342
+        * A, B, C
 
 #Gym
 
