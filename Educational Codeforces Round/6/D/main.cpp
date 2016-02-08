@@ -66,15 +66,16 @@ int main()
     else {
         ll one_ans = ans;
 
-        map<ll, pair<int, int> > asum;
+        vector< pair<ll, pair<int, int> > > asum;
         for(int i = 0; i < n; i++)
             for(int j = i + 1; j < n; j++)
-                asum[2LL * (a[i] + a[j])] = make_pair(i, j); // 2LL Oops
+                asum.push_back(make_pair(2LL * (a[i] + a[j]), make_pair(i, j)));
+        sort(asum.begin(), asum.end());
 
         for(int i = 0; i < m; i++) {
             for(int j = i + 1; j < m; j++)  {
                 ll left = sa - sb + 2LL * (b[i] + b[j]);
-                auto lower = asum.lower_bound(left);
+                auto lower = lower_bound(asum.begin(), asum.end(), make_pair(left, make_pair(0, 0)));
 
                 if(lower != asum.end())
                     check(&ans, left, lower->first, i, j, lower->second.first, lower->second.second);
