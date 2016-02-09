@@ -81,7 +81,7 @@ The following lists will be written as followed.
     30. Round 228
         * A, B, C, D, E
     31. Educational Round #6
-        * A, B, C
+        * A, B, C, D
     32. Round 234
         * A, B, C
     33. Round 244
@@ -134,7 +134,7 @@ The following lists will be written as followed.
   double s = y / x;
   ```
 * Not all the restrictions are actually possible!! (Round 333 Problem C, Round 327 C)
-
+* be aware of working with long long int. See `Educational Round 6 problem D`
 
 # Command
 
