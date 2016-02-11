@@ -35,7 +35,7 @@ int main()
 	base++;
     }
 
-    // fill the -1 with n
+    // fill the 0 with n
     for(int i = 0; i < 2 * n; i++)
 	if(ans[i] == 0)
 	    ans[i] = n;
