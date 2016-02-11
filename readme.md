@@ -104,6 +104,8 @@ The following lists will be written as followed.
         * A, B
     42. Round 342
         * A, B, C
+    43. Educational Round 7
+        * A, B
 
 #Gym
 
