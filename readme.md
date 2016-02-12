@@ -105,7 +105,7 @@ The following lists will be written as followed.
     42. Round 342
         * A, B, C
     43. Educational Round 7
-        * A, B, C, D
+        * A, B, C, D, E
 
 #Gym
 
@@ -136,7 +136,8 @@ The following lists will be written as followed.
   double s = y / x;
   ```
 * Not all the restrictions are actually possible!! (Round 333 Problem C, Round 327 C)
-* be aware of working with long long int. See `Educational Round 6 problem D`
+* Be aware while working with long long int. See `Educational Round 6 problem D`
+* Don't use `memset` unless it's necessary!. See `Educational Round 6 problem E`
 
 # Command
 
