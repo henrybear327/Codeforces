@@ -19,6 +19,10 @@ public class Main {
 	}
 	
 	public static int[][] construct_graph(int n, int[] from, int[] to) {
+		/*
+		 * Thanks to uwi's Java AC code, making Java almost as fast as c++
+		 * http://codeforces.com/contest/622/submission/15935019
+		 * */
 		int[][] g = new int[n + 1][];
 		
 		int[] cnt = new int[n + 1];
