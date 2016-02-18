@@ -107,7 +107,7 @@ The following lists will be written as followed.
     43. Educational Round 7
         * A, B, C, D, E
 
-#Gym
+# Gym
 
 1. Acm Aamman Collegiate Programming Contest (3-star)
     * C, E, J, K
@@ -117,6 +117,10 @@ The following lists will be written as followed.
     * A, E, F, G, I, M
 4. 2015-2016 Samara SAU ACM ICPC Quarterfinal Qualification Contest
     * B, D, F, I, J
+5. 2015-2016 ACM ICPC Baltic Selection Contest
+    * A, D, F, G, H, K, L
+6. 2014 Nordic Collegiate Programming Contest
+    * H, K
 
 # Notes
 
