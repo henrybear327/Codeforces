@@ -8,6 +8,59 @@ public class Main
         MyScanner sc = new MyScanner();
         out = new PrintWriter(new BufferedOutputStream(System.out));
 
+        int n = sc.nextInt();
+        
+        String inp = sc.nextLine();
+        
+        int[] cnt = new int[3]; //RGB
+        for(int i = 0; i < inp.length(); i++) {
+        	if(inp.charAt(i) == 'R')
+        		cnt[0]++;
+        	else if(inp.charAt(i) == 'G')
+        		cnt[1]++;
+        	else
+        		cnt[2]++;
+        }
+        
+        int tmp = 0;
+        for(int i = 0; i < 3; i++)
+        	if(cnt[i] > 0)
+        		tmp++;
+        boolean only_one = (tmp == 1);
+        
+        if((cnt[0] != 0 && cnt[1] != 0 && cnt[2] != 0) || (
+        		(cnt[0] > 1 && cnt[1] > 1) || (cnt[1] > 1 && cnt[2] > 1) || 
+        		(cnt[0] > 1 && cnt[2] > 1)) )
+        	out.println("BGR");
+        else {
+        	if(n == 1 || only_one == true)
+        		out.print(inp.charAt(0));
+        	else {
+        		if(cnt[0] == 0) {
+        			if(cnt[1] > cnt[2]) // G > B
+        				out.println("BR");
+        			else if(cnt[1] == cnt[2])
+        				out.println("R");
+        			else
+        				out.println("GR");
+        		} else if(cnt[1] == 0) { 
+        			if(cnt[0] > cnt[2]) // R > B
+        				out.println("BG");
+        			else if(cnt[0] == cnt[2])
+        				out.println("G");
+        			else
+        				out.println("GR");
+        		} else {
+        			if(cnt[0] > cnt[1]) // R > G
+        				out.println("BG");
+        			else if(cnt[0] == cnt[1])
+        				out.println("B");
+        			else
+        				out.println("BR");
+        		}
+        	}
+        }
+        
         // Start writing your solution here.
 
         /*
