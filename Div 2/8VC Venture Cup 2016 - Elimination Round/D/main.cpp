@@ -20,7 +20,7 @@ int main()
     for(int i = 0; i < n; i++)
 	scanf("%d", &inp[i]);
 
-    // get all combanation's diff cnt
+    // get all combination's diff cnt
     ll diff[5010] = {0};
     for(int i = 0; i < n; i++)
 	for(int j = i + 1; j < n; j++)
