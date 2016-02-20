@@ -106,6 +106,8 @@ The following lists will be written as followed.
         * A, B, C
     43. Educational Round 7
         * A, B, C, D, E
+    44. 8VC Venture Cup 2016 - Elimination Round
+        * A, B, C, D
 
 # Gym
 
