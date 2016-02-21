@@ -1,91 +1,96 @@
 import java.io.*;
 import java.util.*;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        MyScanner sc = new MyScanner();
-        out = new PrintWriter(new BufferedOutputStream(System.out));
+public class Main {
+	public static void main(String[] args) {
+		MyScanner sc = new MyScanner();
+		out = new PrintWriter(new BufferedOutputStream(System.out));
 
-        // Start writing your solution here.
+		int n = sc.nextInt(), d = sc.nextInt();
+		char[] inp = sc.nextLine().toCharArray();
 
-        /*
-        int n      = sc.nextInt();        // read input as integer
-        long k     = sc.nextLong();       // read input as long
-        double d   = sc.nextDouble();     // read input as double
-        String str = sc.next();           // read input as String
-        String s   = sc.nextLine();       // read whole line as String
+		char[] ans = new char[n];
+		for (int i = 0; i < n; i++) {
+			int diffz = inp[i] + d <= 'z' ? d : 'z' - inp[i];
+			int diffa = inp[i] - d >= 'a' ? d : inp[i] - 'a';
 
-    	while(sc.hasNext()) {
-    		...
-    	}
+			if (d == 0) {
+				ans[i] = inp[i];
+			} else if (diffz > diffa) {
+				d -= diffz;
+				ans[i] = (char) (inp[i] + diffz);
+			} else {
+				d -= diffa;
+				ans[i] = (char) (inp[i] - diffa);
+			}
+		}
 
-        int result = 3*n;
-        out.println(result);                    // print via PrintWriter
-        */
+		if (d != 0)
+			out.println("-1");
+		else {
+			/*
+			 * for (int i = 0; i < n; i++) out.printf("%c", ans[i]);
+			 */
 
-        // Stop writing your solution here.
-        out.close();
-    }
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < n; i++)
+				sb.append(ans[i]);
+			sb.append('\n');
+			out.println(sb);
+		}
 
-    // PrintWriter for faster output
-    public static PrintWriter out;
+		out.close();
+	}
 
-    // MyScanner class for faster input
-    public static class MyScanner
-    {
-        BufferedReader br;
-        StringTokenizer st;
+	// PrintWriter for faster output
+	public static PrintWriter out;
 
-        public MyScanner()
-        {
-            br = new BufferedReader(new InputStreamReader(System.in));
-        }
+	// MyScanner class for faster input
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
 
-        boolean hasNext()
-        {
-            while (st == null || !st.hasMoreElements()) {
-                try {
-                    st = new StringTokenizer(br.readLine());
-                } catch (Exception e) {
-                    return false;
-                }
-            }
-            return true;
-        }
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
 
-        String next()
-        {
-            if (hasNext())
-                return st.nextToken();
-            return null;
-        }
+		boolean hasNext() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (Exception e) {
+					return false;
+				}
+			}
+			return true;
+		}
 
-        int nextInt()
-        {
-            return Integer.parseInt(next());
-        }
+		String next() {
+			if (hasNext())
+				return st.nextToken();
+			return null;
+		}
 
-        long nextLong()
-        {
-            return Long.parseLong(next());
-        }
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
 
-        double nextDouble()
-        {
-            return Double.parseDouble(next());
-        }
+		long nextLong() {
+			return Long.parseLong(next());
+		}
 
-        String nextLine()
-        {
-            String str = "";
-            try {
-                str = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str;
-        }
-    }
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+	}
 }
