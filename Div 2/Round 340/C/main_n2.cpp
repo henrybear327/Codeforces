@@ -23,7 +23,7 @@ int main()
     int n, a, b, c, d;
     scanf("%d %d %d %d %d", &n, &a, &b, &c, &d);
 
-    pair<ll, ll> dist[2000]; 
+    pair<ll, ll> dist[2001]; 
     for(int i = 0; i < n; i++) {
 	int x, y;
 	scanf("%d %d", &x, &y);
@@ -31,19 +31,16 @@ int main()
 	dist[i] = make_pair(cal(x, y, a, b), cal(x, y, c, d));
     }
 
-    sort(dist, dist + n);
-
-    ll max_suffix[n + 1];
-    memset(max_suffix, 0, sizeof(max_suffix));
-    for(int i = n - 1; i >= 0; i--) {
-	max_suffix[i] = max(max_suffix[i + 1], dist[i].second);
-    }
-
-    // ll ans = min(dist[n - 1].first, max_suffix[0]); // get min of only using r1/r2
-    ll ans = max_suffix[0]; // using only r2
-    for(int i = 0; i < n; i++) {
+    ll ans = LLONG_MAX;
+    for(int i = 0; i <= n; i++) { 
+	// add a (0, 0) case, because the case of only r2 may be missing!
 	ll r1 = dist[i].first;
-	ll r2 = max_suffix[i + 1]; // the max of dist.second after i
+	ll r2 = 0;
+	for(int j = 0; j <= n; j++) {
+	    if(dist[j].first > r1) 
+		r2 = max(r2, dist[j].second);
+	}
+
 	ans = min(ans, r1 + r2);
     }
 
