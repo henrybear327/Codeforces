@@ -10,47 +10,38 @@
 using namespace std;
 
 typedef long long int ll;
-inline long long int dis(ll a, ll b, ll c, ll d)
+
+inline long long int cal(ll x, ll y, ll a, ll b)
 {
-    return (a - c) * (a - c) + (b - d) * (b - d);
+    ll xx = x - a;
+    ll yy = y - b;
+    return xx * xx + yy * yy;
 }
 
 int main()
 {
-    int n;
-    long long int x1, y1, x2, y2;
-    scanf("%d %lld %lld %lld %lld", &n, &x1, &y1, &x2, &y2);
+    int n, a, b, c, d;
+    scanf("%d %d %d %d %d", &n, &a, &b, &c, &d);
 
-    vector< pair<ll, ll> > d1;
-    vector< pair<ll, ll> > d2;
-    for (int i = 0; i < n; i++) {
-        long long int a, b;
-        scanf("%lld %lld", &a, &b);
+    pair<ll, ll> dist[2001]; 
+    for(int i = 0; i < n; i++) {
+	int x, y;
+	scanf("%d %d", &x, &y);
 
-        d1.push_back(make_pair(dis(a, b, x1, y1), i));
-        d2.push_back(make_pair(dis(a, b, x2, y2), i));
+	dist[i] = make_pair(cal(x, y, a, b), cal(x, y, c, d));
     }
 
-    sort(d1.begin(), d1.end());
-    sort(d2.begin(), d2.end());
+    ll ans = LLONG_MAX;
+    for(int i = 0; i <= n; i++) { 
+	// add a (0, 0) case, because the case of only r2 may be missing!
+	ll r1 = dist[i].first;
+	ll r2 = 0;
+	for(int j = 0; j <= n; j++) {
+	    if(dist[j].first > r1) 
+		r2 = max(r2, dist[j].second);
+	}
 
-    long long int ans = LLONG_MAX;
-    for (int i = 0; i < n; i++) { //pick one in d1
-        long long int mx = d1[i].first, mxx = 0;
-        int masked[n];
-        memset(masked, n, sizeof(masked));
-        for(int j = i; j >= 0; j--) {
-            masked[d1[j].second] = 1;
-        }
-
-        for(int j = n - 1; j >= 0; j--) { //pick the largest uncovered dist.
-            if(masked[j] == 0) {
-                mx = d2[j].first;
-                break;
-            }
-        }
-
-        ans = min(ans, mx + mxx);
+	ans = min(ans, r1 + r2);
     }
 
     printf("%lld\n", ans);
