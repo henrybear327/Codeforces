@@ -89,7 +89,7 @@ The following lists will be written as followed.
     34. Round 271
         * A, B
     35. Round 340
-        * A, B
+        * A, B, C, D
     36. Round 247
         * A, B, C (無限背包), D (unsolved)
     37. Round 338
