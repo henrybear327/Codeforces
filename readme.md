@@ -112,6 +112,8 @@ The following lists will be written as followed.
         * A, B, C
     46. Round 343
         * A, B
+    47. Educational Round 9
+        * A, B, C
 
 # Gym
 
