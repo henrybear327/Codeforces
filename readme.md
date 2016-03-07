@@ -152,6 +152,8 @@ The following lists will be written as followed.
 * Not all the restrictions are actually possible!! (Round 333 Problem C, Round 327 C)
 * Be aware while working with long long int. See `Educational Round 6 problem D`
 * Don't use `memset` unless it's necessary!. See `Educational Round 6 problem E`
+* `ans -= tmp_cnt * (tmp_cnt - 1LL) / 2LL;`, this way can avoid problems when forget to use ll for tmp_cnt. See `Round 345 Problem C`
+
 
 # Command
 
