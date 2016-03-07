@@ -50,13 +50,14 @@ int main()
 
     // x==x && y==y
     pair<int, int> prev = inp[0];
-    ll tmp_cnt = 1;
+    int tmp_cnt = 1;
     for(int i = 1; i <= n; i++) {
 	if(i != n && inp[i] == prev) {
 	    tmp_cnt++;
 	} else {
 	    if(tmp_cnt > 1)
-		ans -= tmp_cnt * (tmp_cnt - 1) / 2;
+		// ans -= tmp_cnt * (tmp_cnt - 1) / 2;
+        ans -= tmp_cnt * (tmp_cnt - 1LL) / 2LL; // this way can avoid problems when forget to use ll for tmp_cnt
 
 	    tmp_cnt = 1;
 	    if(i == n)
