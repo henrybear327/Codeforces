@@ -114,6 +114,8 @@ The following lists will be written as followed.
         * A, B
     47. Educational Round 9
         * A, B, C
+    48. Round 345
+        * A, B, C (You will never forget to use long long to do (x * (x - 1) / 2))
 
 # Gym
 
